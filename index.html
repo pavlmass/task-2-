@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управління текстом</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <h1>RISC-V</h1>
+        <div class="text-box" id="content">
+            <h2>Вивчення RISC-V</h2>
+            <p> відкрита архітектура інструкцій центрального процесора, що базується на принципах RISC. 
+                Проєкт розпочався у 2010 році в Університеті Каліфорнії (Берклі), 
+                до роботи долучилися також багато ентузіастів поза межами університету.</p>
+        </div>
+        <div class="controls">
+            <button class="control-btn" id="hideText">Сховати текст</button>
+            <button class="control-btn" id="showText">Показати текст</button>
+            <button class="control-btn" id="toggleText">Перемикати текст</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#hideText').click(function () {
+                $('#content').fadeOut();
+            });
+            $('#showText').click(function () {
+                $('#content').fadeIn();
+            });
+            $('#toggleText').click(function () {
+                $('#content').fadeToggle();
+            });
+        });
+    </script>
+</body>
+</html>
